@@ -1,0 +1,645 @@
+First line: #rows, #columns. Other lines: S-start, E-end, F-grass, W-snow, G-goose, B-book
+8 8
+G F W F B F F F			8
+ F W F F F W F F		16
+F W F W W S F F			24
+ G F W B G F F F		32
+0 0 G F F G W W			40
+ 0 F B F F G G G		48
+0 0 F G F F F F 		56
+ 0 0 0 0 G W W E		64
+
+
+
+Test 13 - Path
+
+21(Start):
+Snow 13
+Grass 22
+Grass 29
+Goose 28
+Snow 20
+Grass 12
+
+12(Grass)  		null(null)    	5
+20(Snow)  		12(Grass)    	4
+null(null)		12(Grass)    	3
+29(Grass)  		12(Grass)    	2
+22(Grass)  		12(Grass)    	1
+13(Snow)  		22(Grass)    	0
+
+
+22(Grass):
+Grass 14
+Grass 23
+Grass 30
+Grass 29
+Start 21
+Snow 13
+
+13(Snow)  		null(null)    	5
+null(null)		13(Snow)    	4
+29(Grass)  		13(Snow)    	3
+30(Grass)  		13(Snow)    	2
+23(Grass)  		30(Grass)    	1
+14(Grass)  		23(Grass)    	0
+
+
+14(Grass):
+Grass 7
+Grass 15
+Grass 23
+Grass 22
+Snow 13
+Grass 6
+
+6(Grass)  		null(null)    	5
+13(Snow)  		6(Grass)    	4
+null(null)		6(Grass)    	3
+23(Grass)  		6(Grass)    	2
+15(Grass)  		23(Grass)    	1
+7(Grass)  		15(Grass)    	0
+
+
+7(Grass):
+null null
+null null
+Grass 15
+Grass 14
+Grass 6
+null null
+
+null(null)		null(null)    	5
+6(Grass)  		null(null)    	4
+null(null)		6(Grass)    	3
+15(Grass)  		6(Grass)    	2
+null(null)		15(Grass)    	1
+null(null)		15(Grass)    	0
+
+
+15(Grass):
+null null
+null null
+null null
+Grass 23
+Grass 14
+Grass 7
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+23(Grass)  		null(null)    	3
+null(null)		23(Grass)    	2
+null(null)		23(Grass)    	1
+null(null)		23(Grass)    	0
+
+
+23(Grass):
+Grass 15
+null null
+Grass 31
+Grass 30
+Grass 22
+Grass 14
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+30(Grass)  		null(null)    	3
+31(Grass)  		30(Grass)    	2
+null(null)		31(Grass)    	1
+null(null)		31(Grass)    	0
+
+
+31(Grass):
+null null
+null null
+null null
+Snow 39
+Grass 30
+Grass 23
+
+null(null)		null(null)    	5
+30(Grass)  		null(null)    	4
+39(Snow)  		30(Grass)    	3
+null(null)		30(Grass)    	2
+null(null)		30(Grass)    	1
+null(null)		30(Grass)    	0
+
+
+30(Grass):
+Grass 23
+Grass 31
+Snow 39
+Snow 38
+Grass 29
+Grass 22
+
+null(null)		null(null)    	5
+29(Grass)  		null(null)    	4
+null(null)		29(Grass)    	3
+39(Snow)  		29(Grass)    	2
+null(null)		29(Grass)    	1
+null(null)		29(Grass)    	0
+
+
+29(Grass):
+Grass 22
+Grass 30
+Snow 38
+Goose 37
+Goose 28
+Start 21
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+null(null)		null(null)    	1
+null(null)		null(null)    	0
+
+29 popped off
+
+30(Grass):
+Grass 23
+Grass 31
+Snow 39
+Snow 38
+Grass 29
+Grass 22
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+39(Snow)  		null(null)    	2
+null(null)		39(Snow)    	1
+null(null)		39(Snow)    	0
+
+
+39(Snow):
+Grass 31
+null null
+Goose 47
+Goose 46
+Snow 38
+Grass 30
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+null(null)		null(null)    	1
+null(null)		null(null)    	0
+
+39 popped off
+
+30(Grass):
+Grass 23
+Grass 31
+Snow 39
+Snow 38
+Grass 29
+Grass 22
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+null(null)		null(null)    	1
+null(null)		null(null)    	0
+
+30 popped off
+
+31(Grass):
+null null
+null null
+null null
+Snow 39
+Grass 30
+Grass 23
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+null(null)		null(null)    	1
+null(null)		null(null)    	0
+
+31 popped off
+
+23(Grass):
+Grass 15
+null null
+Grass 31
+Grass 30
+Grass 22
+Grass 14
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+null(null)		null(null)    	1
+null(null)		null(null)    	0
+
+23 popped off
+
+15(Grass):
+null null
+null null
+null null
+Grass 23
+Grass 14
+Grass 7
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+null(null)		null(null)    	1
+null(null)		null(null)    	0
+
+15 popped off
+
+7(Grass):
+null null
+null null
+Grass 15
+Grass 14
+Grass 6
+null null
+
+null(null)		null(null)    	5
+6(Grass)  		null(null)    	4
+null(null)		6(Grass)    	3
+null(null)		6(Grass)    	2
+null(null)		6(Grass)    	1
+null(null)		6(Grass)    	0
+
+
+6(Grass):
+null null
+Grass 7
+Grass 14
+Snow 13
+Grass 5
+null null
+
+null(null)		null(null)    	5
+5(Grass)  		null(null)    	4
+13(Snow)  		5(Grass)    	3
+null(null)		5(Grass)    	2
+null(null)		5(Grass)    	1
+null(null)		5(Grass)    	0
+
+
+5(Grass):
+null null
+Grass 6
+Snow 13
+Grass 12
+Book 4
+null null
+
+null(null)		null(null)    	5
+4(Book)  		null(null)    	4
+12(Grass)  		4(Book)    	3
+13(Snow)  		4(Book)    	2
+null(null)		4(Book)    	1
+null(null)		4(Book)    	0
+
+
+4(Book):
+null null
+Grass 5
+Grass 12
+Grass 11
+Grass 3
+null null
+
+null(null)		null(null)    	5
+3(Grass)  		null(null)    	4
+11(Grass)  		3(Grass)    	3
+12(Grass)  		11(Grass)    	2
+null(null)		12(Grass)    	1
+null(null)		12(Grass)    	0
+
+
+12(Grass):
+Grass 5
+Snow 13
+Start 21
+Snow 20
+Grass 11
+Book 4
+
+null(null)		null(null)    	5
+11(Grass)  		null(null)    	4
+20(Snow)  		11(Grass)    	3
+null(null)		11(Grass)    	2
+13(Snow)  		11(Grass)    	1
+null(null)		11(Grass)    	0
+
+
+11(Grass):
+Book 4
+Grass 12
+Snow 20
+Snow 19
+Grass 10
+Grass 3
+
+3(Grass)  		null(null)    	5
+10(Grass)  		3(Grass)    	4
+19(Snow)  		10(Grass)    	3
+20(Snow)  		10(Grass)    	2
+null(null)		10(Grass)    	1
+null(null)		10(Grass)    	0
+
+
+10(Grass):
+Grass 3
+Grass 11
+Snow 19
+Grass 18
+Snow 9
+Snow 2
+
+2(Snow)  		null(null)    	5
+9(Snow)  		2(Snow)    	4
+18(Grass)  		9(Snow)    	3
+19(Snow)  		18(Grass)    	2
+null(null)		18(Grass)    	1
+3(Grass)  		18(Grass)    	0
+
+
+3(Grass):
+null null
+Book 4
+Grass 11
+Grass 10
+Snow 2
+null null
+
+null(null)		null(null)    	5
+2(Snow)  		null(null)    	4
+null(null)		2(Snow)    	3
+null(null)		2(Snow)    	2
+null(null)		2(Snow)    	1
+null(null)		2(Snow)    	0
+
+
+2(Snow):
+null null
+Grass 3
+Grass 10
+Snow 9
+Grass 1
+null null
+
+null(null)		null(null)    	5
+1(Grass)  		null(null)    	4
+9(Snow)  		1(Grass)    	3
+null(null)		1(Grass)    	2
+null(null)		1(Grass)    	1
+null(null)		1(Grass)    	0
+
+
+1(Grass):
+null null
+Snow 2
+Snow 9
+Grass 8
+Goose 0
+null null
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+8(Grass)  		null(null)    	3
+9(Snow)  		8(Grass)    	2
+null(null)		8(Grass)    	1
+null(null)		8(Grass)    	0
+
+
+8(Grass):
+Grass 1
+Snow 9
+Snow 17
+Grass 16
+null null
+Goose 0
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+16(Grass)  		null(null)    	3
+17(Snow)  		16(Grass)    	2
+9(Snow)  		16(Grass)    	1
+null(null)		16(Grass)    	0
+
+
+16(Grass):
+Grass 8
+Snow 17
+Goose 24
+null null
+null null
+null null
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+null(null)		null(null)    	2
+17(Snow)  		null(null)    	1
+null(null)		17(Snow)    	0
+
+
+17(Snow):
+Snow 9
+Grass 18
+Grass 25
+Goose 24
+Grass 16
+Grass 8
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+25(Grass)  		null(null)    	2
+18(Grass)  		25(Grass)    	1
+9(Snow)  		18(Grass)    	0
+
+
+18(Grass):
+Grass 10
+Snow 19
+Snow 26
+Grass 25
+Snow 17
+Snow 9
+
+9(Snow)  		null(null)    	5
+null(null)		9(Snow)    	4
+25(Grass)  		9(Snow)    	3
+26(Snow)  		9(Snow)    	2
+19(Snow)  		26(Snow)    	1
+null(null)		19(Snow)    	0
+
+
+19(Snow):
+Grass 11
+Snow 20
+Book 27
+Snow 26
+Grass 18
+Grass 10
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+26(Snow)  		null(null)    	3
+27(Book)  		26(Snow)    	2
+20(Snow)  		27(Book)    	1
+null(null)		27(Book)    	0
+
+
+27(Book):
+Snow 20
+Goose 28
+Grass 36
+Grass 35
+Snow 26
+Snow 19
+
+null(null)		null(null)    	5
+26(Snow)  		null(null)    	4
+35(Grass)  		26(Snow)    	3
+36(Grass)  		35(Grass)    	2
+null(null)		35(Grass)    	1
+20(Snow)  		35(Grass)    	0
+
+
+35(Grass):
+Book 27
+Grass 36
+Grass 43
+Book 42
+Goose 34
+Snow 26
+
+26(Snow)  		null(null)    	5
+null(null)		26(Snow)    	4
+42(Book)  		26(Snow)    	3
+43(Grass)  		42(Book)    	2
+36(Grass)  		42(Book)    	1
+null(null)		42(Book)    	0
+
+
+42(Book):
+Grass 35
+Grass 43
+Goose 51
+Grass 50
+Grass 41
+Goose 34
+
+null(null)		null(null)    	5
+41(Grass)  		null(null)    	4
+50(Grass)  		41(Grass)    	3
+null(null)		50(Grass)    	2
+43(Grass)  		50(Grass)    	1
+null(null)		43(Grass)    	0
+
+
+43(Grass):
+Grass 36
+Grass 44
+Grass 52
+Goose 51
+Book 42
+Grass 35
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+52(Grass)  		null(null)    	2
+44(Grass)  		52(Grass)    	1
+36(Grass)  		44(Grass)    	0
+
+
+36(Grass):
+Goose 28
+Goose 37
+Grass 44
+Grass 43
+Grass 35
+Book 27
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+null(null)		null(null)    	3
+44(Grass)  		null(null)    	2
+null(null)		44(Grass)    	1
+null(null)		44(Grass)    	0
+
+
+44(Grass):
+Goose 37
+Goose 45
+Grass 53
+Grass 52
+Grass 43
+Grass 36
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+52(Grass)  		null(null)    	3
+53(Grass)  		52(Grass)    	2
+null(null)		53(Grass)    	1
+null(null)		53(Grass)    	0
+
+
+53(Grass):
+Goose 45
+Grass 54
+Snow 61
+Goose 60
+Grass 52
+Grass 44
+
+null(null)		null(null)    	5
+52(Grass)  		null(null)    	4
+null(null)		52(Grass)    	3
+61(Snow)  		52(Grass)    	2
+54(Grass)  		52(Grass)    	1
+null(null)		54(Grass)    	0
+
+
+54(Grass):
+Goose 46
+Grass 55
+Snow 62
+Snow 61
+Grass 53
+Goose 45
+
+null(null)		null(null)    	5
+null(null)		null(null)    	4
+61(Snow)  		null(null)    	3
+62(Snow)  		61(Snow)    	2
+55(Grass)  		62(Snow)    	1
+null(null)		62(Snow)    	0
+
+
+62(Snow):
+Grass 55
+End 63
+null null
+null null
+Snow 61
+Grass 54
+
+null(null)		null(null)    	5
+61(Snow)  		null(null)    	4
+null(null)		61(Snow)    	3
+null(null)		61(Snow)    	2
+63(End)  		61(Snow)    	1
+
+found path: 21 22 14 7 15 23 31 30 29 30 39 30 31 23 15 7 6 5 4 12 11 10 3 2 1 8 16 17 18 19 27 35 42 43 36 44 53 54 62 63 
+			 FAILED

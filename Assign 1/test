@@ -1,0 +1,64 @@
+	public void loadData(String filename) {
+		// Preparing text file reader
+		TextFileReader tfr = new TextFileReader(filename);
+		
+		
+		// Initializing the first line (used to check type later) and the string array for its splits
+		String[] checks = tfr.readString().split(",");
+		String line;
+		String[] splits;
+		
+		// Initializing counts for lanthanides and actinides
+		int lanthinideCount = 0;
+		int actinideCount = 0;		
+		
+		// While there's still data to be read
+		while (!tfr.endOfFile()) {
+			// Loading the next line and splitting it
+			line = tfr.readString();
+			splits = line.split(",");
+			
+			// Initializing element information
+			int atomicNum = Integer.parseInt(splits[0]);
+			float weight = Float.parseFloat(splits[3]);
+			String symbol = splits[2];
+			String name = splits[1];
+			String state = splits[8];
+			String type = splits[15];
+			for (int i = 12; i < 15; i++) {
+				if (splits[i].equals("yes")) {
+					type = checks[i];
+					break;
+				}
+			}
+
+			// Initializing period/group information
+			int period = Integer.parseInt(splits[7]);
+			String group = splits[8];
+			int atomicGroup = 0;
+			if (!splits[8].isEmpty()) {
+				atomicGroup = Integer.parseInt(splits[8]);
+			}
+
+			// Initializing element based on previous information
+			Element elementToAdd = new Element(atomicNum, weight, symbol, name, state, type);
+			
+			// Initializing lanthanide and actinide checks
+			boolean isLanthanide = period == 6 && group.isBlank();
+			boolean isActinide = period == 7 && group.isBlank();
+
+			// Add element to the proper group based on the information given
+			if (isLanthanide) {
+				lanthanides[lanthinideCount] = elementToAdd;
+				lanthinideCount++;
+			} else if(isActinide) {
+				actinides[actinideCount] = elementToAdd;
+				actinideCount++;
+			}else {
+				mainTable[period-1][atomicGroup-1] = elementToAdd;
+			}
+		} // end of while loop
+		
+		// Closing the text file reader
+		tfr.close();
+	} // end of loadData
